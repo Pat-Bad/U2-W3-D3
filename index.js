@@ -4,9 +4,11 @@ const getBooks = function () {
             if (response.ok) {
                 return response.json()
             }
-            else { throw new Error('Cannot reach server') }})
-        .then((books) => {console.log('we have these books', books)
-            books.forEach((book)=>{
+            else { throw new Error('Cannot reach server') }
+        })
+        .then((books) => {
+            console.log('we have these books', books)
+            books.forEach((book) => {
                 const cardsRow = document.getElementById('cardContainer')
                 const newCol = document.createElement('div')
                 newCol.classList.add('col', 'col-4', 'col-md-3')
@@ -18,18 +20,21 @@ const getBooks = function () {
     <a href="#" class="btn btn-warning dischargeButton">Discharge</a>
   </div>
 </div>`
-cardsRow.appendChild(newCol)
-const card = newCol.querySelector('.card')
-const dischargeButton = newCol.querySelector('.dischargeButton')
-dischargeButton.addEventListener('click', function () {
-    card.classList.add('d-none')})
+                cardsRow.appendChild(newCol)
 
-})
-
+                const card = newCol.querySelector('.card')
+                const dischargeButton = newCol.querySelector('.dischargeButton')
+                dischargeButton.addEventListener('click', function () {
+                    card.classList.add('d-none')
+                })
 
             })
-            
-    .catch ((error) => { console.log('Error!') })}
+
+
+        })
+
+        .catch((error) => { console.log('Error!') })
+}
 
 
 getBooks()
