@@ -16,7 +16,7 @@ const getBooks = function () {
   <img src=${book.img} class="card-img-top" alt="book cover">
   <div class="card-body">
     <h5 class="card-title">${book.title}</h5>
-    <p class="card-text">${book.price}</p>
+    <p class="card-text">${book.price} $</p>
     <a href="#" class="btn btn-warning dischargeButton">Discharge</a>
   </div>
 </div>`
