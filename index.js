@@ -11,8 +11,8 @@ const getBooks = function () {
             books.forEach((book) => {
                 const cardsRow = document.getElementById('cardContainer')
                 const newCol = document.createElement('div')
-                newCol.classList.add('col', 'col-4', 'col-md-3')
-                newCol.innerHTML = `<div class="card g-3 my-3">
+                newCol.classList.add('col', 'col-4', 'col-md-3', 'my-3')
+                newCol.innerHTML = `<div class="card g-3 h-100 ">
   <img src=${book.img} class="card-img-top" alt="book cover">
   <div class="card-body">
     <h5 class="card-title">${book.title}</h5>
